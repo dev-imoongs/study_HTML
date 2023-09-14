@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form - task</title>
+</head>
+<style>
+* {
+    font-family: 'Metro Sans',sans-serif;
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+html {
+    line-height: normal;
+    -webkit-text-size-adjust: 100%;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.kmong {
+    cursor: pointer;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+.border{
+    padding: 56px 80px;
+    border: 1px solid #e4e5ed;
+    width: 100%;
+}
+.body{
+    width: 560px;
+    padding: 20px 0px;
+    margin: 0 auto;
+    margin-top: 56px;
+    margin-bottom: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.headTextArea{
+    font-size: 30px;
+    font-weight: normal;
+    color: #303441;
+    line-height: normal;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+.formArea{
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.content-block {
+    position: relative;
+    padding-bottom: 16px;
+}
+.name {
+    font-size: 16px;
+    color: #555969;
+    margin-bottom: 8px;
+    position: relative;
+}
+.content{
+    width: 100%;
+    border: 1px solid #e4e5ed;
+    border-radius: 4px;
+    -webkit-transition: background-color 0.2s,border-color 0.2s;
+    transition: background-color 0.2s,border-color 0.2s;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow: hidden;
+    cursor: text;
+    background-color: #fff;
+    color: #303441;
+    height: 52px;
+    font-size: 15px;
+    padding: 0 16px;
+    min-width: 80px;
+}
+.text-input{
+    outline: none;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    background-image: none;
+    box-sizing: border-box;
+    font-size: inherit;
+    border: none;
+    font-weight: inherit;
+    background-color: transparent;
+    text-align: left;
+    color: inherit;
+}
+.select-border{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+.select-box{
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: transparent;
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    min-height: 38px;
+    outline: 0!important;
+    position: relative;
+    -webkit-transition: all 100ms;
+    transition: all 100ms;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e4e5ed;
+    box-shadow: none;
+    min-height: 30px;
+}
+
+.terms {
+    padding: 16px;
+    border: 1px solid #e4e5ed;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.bottom-message{
+    margin: 24px 0;
+    font-size: 13px;
+    color: #9a9ba7;
+    text-align: center;
+    line-height: normal;
+}
+</style>
+
+<body class="body">
+  <form name="joinForm">
+  <h2 align="center" class="kmong">kmong</h2><!-- 상단 중앙 -->
+  <div class="border">
+    <form class="formArea"><!-- 폼 에어리어 -->
+      <h1 class="headTextArea">딱 이것만 체크하면 가입 완료!</h1> 
+      <!-- 이메일 -->
+      <div class="content-block">
+        <div class="name">이메일<sup style="color: #ff7262;">*</sup></div>
+        <div class="content">
+          <input type="email" placeholder="이메일을 입력해주세요." name="userEmail" required autocomplete="none" class="text-input">
+        </div>
+      </div> 
+      <!-- 비밀번호 -->
+      <div class="content-block">
+        <div class="name">비밀번호<sup style="color: #ff7262;">*</sup></div>
+        <div class="content">
+          <input type="password" placeholder="비밀번호를 입력해주세요. (8자리 이상)" name="userPassword" required autocomplete="none" class="text-input">
+        </div>
+        <div class="content">
+          <input type="text" placeholder="비밀번호를 한번 더 입력해주세요." name="userPasswordCheck" required autocomplete="none" class="text-input">
+        </div>
+      </div>
+      <!-- 직업 -->
+      <div class="select-border">
+        <div class="name">직업<sup style="color: #ff7262;">*</sup></div>
+        <div class="select-box">
+          <div>
+            <select name="job">
+              <option value="freelancer">프리랜서</option>
+              <option value="office-workers">직장인</option>
+              <option value="small-business">소상공인</option>
+              <option value="startup">스타트업 창업자</option>
+              <option value="colleger">대학생</option>
+              <option value="job-seeker">취업준비생</option>
+            </select>
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </div>
+      <!-- 비즈니스 분야 -->
+      <div class="select-border">
+        <div class="name">비즈니스 분야<sup style="color: #ff7262;">*</sup></div>
+        <div class="select-box">
+          <select name="job">
+            <option value="shop">쇼핑몰</option>
+            <option value="marketing">마케팅/광고 에이전시</option>
+            <option value="food">음식·주점</option>
+            <option value="it">IT 개발</option>
+            <option value="content">콘텐츠</option>
+            <option value="artist">예술·스포츠·여가</option>
+            <option value="manufacturing">제조업</option>
+            <option value="beauty">미용·뷰티</option>
+            <option value="medicine">병의원·제약</option>
+            <option value="finance">금융·보험</option>
+            <option value="education">학원·교육</option>
+            <option value="travel">여행·숙박</option>
+            <option value="immovables">부동산·분양</option>
+            <option value="etc">기타</option>
+
+          </select>
+        </div>
+      </div>
+      <!-- 관심사 -->
+      <div class="select-border">
+        <div class="name">관심사 선택(중복선택 가능)<sup style="color: #ff7262;">*</sup></div>
+        <div class="select-box">
+          <div name="job">
+            <label><input type="checkbox" name="hobby" value="영화감상"> 영화감상</label>
+            <label><input type="checkbox" name="hobby" value="골프"> 골프</label>
+            <label><input type="checkbox" name="hobby" value="볼링"> 볼링</label>
+            <label><input type="checkbox" name="hobby" value="기타"> 기타</label>
+            <label><input type="checkbox" name="hobby" value="테니스"> 테니스</label>
+            <label><input type="checkbox" name="hobby" value="산책"> 산책</label>
+            <label><input type="checkbox" name="hobby" value="연애"> 연애</label>
+            <label><input type="checkbox" name="hobby" value="게임"> 게임</label>
+            <label><input type="checkbox" name="hobby" value="등산"> 등산</label>
+            <label><input type="checkbox" name="hobby" value="축구"> 축구</label>
+            <label><input type="checkbox" name="hobby" value="노래"> 노래</label>
+          </div>
+        </div>
+      </div>
+      <!-- 동의약관 -->
+      <div class="terms">
+        <div>
+          <span><label><input type="checkbox"></input></label></span>
+          <span><caption>모두 동의합니다</caption></span>
+        </div>
+        <hr>
+        <div>
+          <div>
+            <span><label><input type="checkbox"></input></label></span>
+            <span>만 14세 이상입니다.(필수)</span>
+          </div>
+          <div>
+            <span><label><input type="checkbox"></input></label></span>
+            <span>서비스 이용약관에 동의합니다.(필수)</span>
+          </div>
+          <div>
+            <span><label><input type="checkbox"></input></label></span>
+            <span>개인정보 이용/수집에 동의합니다.(필수)</span>
+          </div>
+          <div>
+            <span><label><input type="checkbox"></input></label></span>
+            <span>마케팅 수신 · 홍보 목적의 개인정보 수집 및 이용에 동의합니다.(선택)</span>
+          </div>
+          <div>
+            <span><label><input type="checkbox"></input></label></span>
+            <span>장기 미접속 시 계정 활성 상태를 유지합니다.(선택)</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button><span>버튼만 누르면 가입 완료!</span></button>
+      </div>
+  </form>
+  </div>
+    <div class="bottom-message">크몽은 회원님의 원활한 서비스 이용에 필요한 정보를<br>
+      적절한 전자적 수단을 통해 제공하고 있습니다.</div>
+  </form>
+</body>
+</html>
